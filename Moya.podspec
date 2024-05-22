@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Moya"
-  s.version      = "15.0.0"
+  s.version      = "15.0.1"
   s.summary      = "Network abstraction layer written in Swift"
   s.description  = <<-EOS
   Moya abstracts network commands using Swift Generics to provide developers
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.default_subspec = "Core"
   s.swift_version = '5.3'
   s.cocoapods_version = '>= 1.4.0'
-
+  s.resource_bundles = {'Moya' => ['Sources/PrivacyInfo.xcprivacy']}
   s.subspec "Core" do |ss|
     ss.source_files  = "Sources/Moya/", "Sources/Moya/Plugins/"
     ss.dependency "Alamofire"
@@ -49,5 +49,5 @@ Pod::Spec.new do |s|
     ss.dependency "Moya/Core"
     ss.dependency "RxSwift"
   end
-  s.resource_bundles = {'Moya' => ['Sources/PrivacyInfo.xcprivacy']}
+
 end
