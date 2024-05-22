@@ -49,4 +49,5 @@ Pod::Spec.new do |s|
     ss.dependency "Moya/Core"
     ss.dependency "RxSwift"
   end
+  s.resource_bundles = {'Moya' => ['Source/PrivacyInfo.xcprivacy']}
 end
